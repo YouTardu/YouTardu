@@ -1,4 +1,4 @@
-### YOUTARDU 👋
+### YOUTARDU WAS FOUNDED BY XAYBAYXAR 👋
 
 <!--
 **YouTardu/YouTardu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
