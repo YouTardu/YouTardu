@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Style Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .folder-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .folder {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .folder-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #6a0dad;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .folder-name {
+            font-size: 16px;
+            color: #333;
+        }
+        .file-upload {
+            background-color: #6a0dad;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .file-upload:hover {
+            background-color: #5a0098;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        #file-info {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="folder-container">
+        <div class="file-upload">
+            <label for="fileInput">Upload File</label>
+            <input type="file" id="fileInput" onchange="displayFileName()">
+        </div>
+
+        <div class="folder">
+            <div class="folder-icon"></div>
+            <div class="folder-name">Documents</div>
+        </div>
+
+        <div class="folder">
+            <div class="folder-icon"></div>
+            <div class="folder-name">Images</div>
+        </div>
+
+        <div class="folder">
+            <div class="folder-icon"></div>
+            <div class="folder-name">Videos</div>
+        </div>
+
+        <div id="file-info"></div>
+    </div>
+
+    <script>
+        function displayFileName() {
+            const fileInput = document.getElementById('fileInput');
+            const fileInfo = document.getElementById('file-info');
+            const file = fileInput.files[0];
+
+            if (file) {
+                fileInfo.innerHTML = `<p>Selected file: <strong>${file.name}</strong> (${file.size} bytes)</p>`;
+            } else {
+                fileInfo.innerHTML = '<p>No file selected.</p>';
+            }
+        }
+    </script>
+</body>
+</html>

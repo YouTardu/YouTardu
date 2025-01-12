@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YouTardu Emojis</title>
+  <link rel="stylesheet" href="Css/emojionearea.min.css">
+  <link rel="stylesheet" href="Emojis.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="Js/emojionearea.min.js"></script>
+</head>
+
+<body>
+  <h1 align="center"><img src="images/YouTardu.png"alt="YouTardu Logo"width="100"height="100"></h1>
+  <h1 align="center"style="color:purple;">YouTardu Emojis</h1>
+  <textarea name="YouTardu" class="txt" id="YouTardu"></textarea>
+
+</body>
+  <!--<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="Js/emojionearea.min.js"></script>
+-->
+<script>
+  $(document).ready(function(){
+    $("#YouTardu").emojionearea({
+      pickerPosition:"bottom"
+    });
+  }
+</script>
+</html>

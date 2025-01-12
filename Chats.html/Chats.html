@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Interface</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: row;
+        }
+
+        /* Left Side (Profile cards) */
+        .left-side {
+            flex: 1;
+            padding: 20px;
+            overflow-y: scroll;
+            background-color: white;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background-color: #f1f1f1;
+        }
+
+        .card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .card .details {
+            flex-grow: 1;
+        }
+
+        .card .name {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .card .time {
+            font-size: 12px;
+            color: gray;
+        }
+
+        /* Right Side (Messages) */
+        .right-side {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            overflow-y: scroll;
+            border-left: 2px solid #e0e0e0;
+        }
+
+        .message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .message img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .message .content {
+            flex-grow: 1;
+        }
+
+        .message .time {
+            font-size: 12px;
+            color: #888;
+            margin-left: 10px;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .bottom-nav .nav-item {
+            text-align: center;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .bottom-nav .nav-item.active {
+            color: #34b7f1;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 25px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            font-size: 16px;
+        }
+
+        .search-bar .icon {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side (Profile Cards) -->
+        <div class="left-side">
+            <div class="search-bar">
+                <span class="material-icons icon">search</span>
+                <input type="text" placeholder="Search by criteria">
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/60" alt="Profile">
+                <div class="details">
+                    <div class="name">Lesti Kejora</div>
+                    <div class="time">5 min</div>
+                </div>
+                <span class="material-icons">favorite_border</span>
+            </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/60" alt="Profile">
+                <div class="details">
+                    <div class="name">Michael Junairi</div>
+                    <div class="time">36 min</div>
+                </div>
+                <span class="material-icons">favorite_border</span>
+            </div>
+        </div>
+
+        <!-- Right Side (Messages) -->
+        <div class="right-side">
+            <div class="message">
+                <img src="https://via.placeholder.com/40" alt="Avatar">
+                <div class="content">
+                    <div class="name">Marfuah C</div>
+                    <div class="text">Hi nice to meet you</div>
+                </div>
+                <div class="time">10:24</div>
+            </div>
+
+            <div class="message">
+                <img src="https://via.placeholder.com/40" alt="Avatar">
+                <div class="content">
+                    <div class="name">Marcus Holii</div>
+                    <div class="text">Thank youuu</div>
+                </div>
+                <div class="time">08:05</div>
+            </div>
+
+            <div class="message">
+                <img src="https://via.placeholder.com/40" alt="Avatar">
+                <div class="content">
+                    <div class="name">Sitti Natalie</div>
+                    <div class="text">Okay see you</div>
+                </div>
+                <div class="time">01:30</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item active">
+            <span class="material-icons">home</span>
+        </div>
+        <div class="nav-item">
+            <span class="material-icons">chat_bubble_outline</span>
+        </div>
+        <div class="nav-item">
+            <span class="material-icons">paw</span>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTardu Search</title>
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; text-align: center; }
+        input { width: 50%; padding: 10px; margin: 10px 0;border-radius: 50px; }
+        button { padding: 10px 20px;border-radius: 50px; }
+    </style>
+</head>
+<body><br><br>
+  <!--Tab to edit-->
+</br>
+    <h1 style="color:purple;">YouTardu Search</h1>
+    <input type="text" id="query" placeholder="Enter your search query here...">
+    <button onclick="search()">Search</button>
+    <div id="results"></div>
+
+    <script>
+        function search() {
+            const query = document.getElementById('query').value;
+            fetch(`/search?q=${query}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = data.map(result => `<p>${result.title}</p>`).join('');
+                });
+        }
+    </script>
+</body>
+</html>

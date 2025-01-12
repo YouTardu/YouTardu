@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Drive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        input[type="file"] {
+            margin: 20px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5a0098;
+        }
+        .file-list {
+            margin-top: 20px;
+        }
+        .file-item {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 5px;
+            text-align: left;
+            display: inline-block;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Drive</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file">
+        <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
+    <div id="result" class="file-list"></div>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('Please select a file.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('http://localhost:5000/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML += `
+                    <div class="file-item">
+                        <strong>${data.filename}</strong> (${data.size} bytes)
+                    </div>`;
+                fileInput.value = ''; // Reset file input
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

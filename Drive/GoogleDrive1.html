@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive-like Interface</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #34b7f1;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li:hover {
+            background-color: #e3f2fd;
+            border-radius: 4px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .file-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .file-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-item:hover {
+            background-color: #f1f1f1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .file-icon {
+            font-size: 40px;
+            color: #0078d4;
+        }
+
+        .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">Drive</div>
+        <ul>
+            <li><i class="material-icons">home</i> Home</li>
+            <li><i class="material-icons">folder</i> My Drive</li>
+            <li><i class="material-icons">computer</i> Computers</li>
+            <li><i class="material-icons">share</i> Shared with me</li>
+            <li><i class="material-icons">star</i> Starred</li>
+            <li><i class="material-icons">delete</i> Trash</li>
+            <li><i class="material-icons">storage</i> Storage</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <input type="text" class="search-bar" placeholder="Search in Drive...">
+
+        <!-- File Display Grid -->
+        <div class="file-list">
+            <div class="file-item">
+                <div class="file-icon material-icons">description</div>
+                <div class="file-name">01.Web Basic Note-1 (HTML).pdf</div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon material-icons">description</div>
+                <div class="file-name">Apache Web Server.pdf</div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon material-icons">description</div>
+                <div class="file-name">Basic Hacking Techniques.pdf</div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon material-icons">folder</div>
+                <div class="file-name">Documents</div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon material-icons">folder</div>
+                <div class="file-name">Images</div>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon material-icons">folder</div>
+                <div class="file-name">Videos</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
