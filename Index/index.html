@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b572ff92bb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"type="text/css"href="Style.css">
+    <title>YouTardu</title>
+  </head>
+    <body class="darkmode"id="body">
+      <br><br><br>
+       <div class="signup-popups">
+          <div class="container">
+             <h1>YOUTARDU</h1>
+                <h2>Sign Up</h2>
+                    <form class="signup-form" action="SignUp.php" method="POST">
+                      <input type="username"id="username" placeholder="Email or Username" required>
+                         <input type="password" id="password" placeholder="Password" required>
+                           <i class="fa-solid fa-eye" id="eyeicon"></i>
+                          <a href="forgotten.html" class="forgotte">forgotten password!</a><br><br>
+                       <button type="submit" class="btn">Login</button><br>
+                  <button type="submit" class="btn2">Sign Up</button>
+              <p class="terms">By creating an account , agree to our <a href="TermsOfService.html">Terms Of Service </a>& <a href="PrivacyPolicy.html">Privacy Policy</a></p>
+          </form>
+       </div>
+  </div>
+  <script>
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    let password = document.getElementById("password").value;
+    if (password.length < 8) {
+      alert("Password must contain 8 digits");
+      event.preventDefault(); // Form submission ကို ရပ်တယ်
+    }
+  });
+</script>
+<p>&nbsp;&nbsp;</p>
+<adress>
+  <footer>
+    <p>Footer</p>
+  </footer>
+</adress>
+    </body>
+</html>
