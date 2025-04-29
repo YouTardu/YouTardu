@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b572ff92bb.js" crossorigin="anonymous"></script>
+      <link rel="icon" type="image/x-icon" href="YouTardu.png">
     <link rel="stylesheet"type="text/css"href="Style.css">
     <title>YouTardu</title>
   </head>
-    <body class="darkmode"id="body">
+    <body>
       <br><br><br>
-       <div class="signup-popups">
-          <div class="container">
-             <h1>YOUTARDU</h1>
-                <h2>Sign Up</h2>
+       <div class="card">
+          <div class="card-container">
+            <img src="YouTardu.png" alt="YouTardu" style="width:100px;height:100px;">
+             <h1>YouTardu</h1><br>
+                
                     <form class="signup-form" action="SignUp.php" method="POST">
                       <input type="username"id="username" placeholder="Email or Username" required>
-                         <input type="password" id="password" placeholder="Password" required>
-                           <i class="fa-solid fa-eye" id="eyeicon"></i>
-                          <a href="forgotten.html" class="forgotte">forgotten password!</a><br><br>
+                         <input type="password" id="password" placeholder="Password" required><br>
+                           
+                          <a href="forgotten.html" class="forgotten">forgotten password!</a><br><br>
                        <button type="submit" class="btn">Login</button><br>
                   <button type="submit" class="btn2">Sign Up</button>
               <p class="terms">By creating an account , agree to our <a href="TermsOfService.html">Terms Of Service </a>& <a href="PrivacyPolicy.html">Privacy Policy</a></p>
           </form>
        </div>
-  </div>
-  <script>
-  document.getElementById("myForm").addEventListener("submit", function(event) {
-    let password = document.getElementById("password").value;
-    if (password.length < 8) {
-      alert("Password must contain 8 digits");
-      event.preventDefault(); // Form submission ကို ရပ်တယ်
-    }
-  });
-</script>
+  </div><br><br><br><br><br>
+
 <p>&nbsp;&nbsp;</p>
-<adress>
   <footer>
-    <p>Footer</p>
+    <div class="container">
+      <p>footers</p>
+      <p>footers2</p>
+    </div>
+    <div class="footer-2">
+      <p>2025 &copy; YouTardu <br> All Right Reserved</p>
+    </div>
   </footer>
-</adress>
     </body>
 </html>
