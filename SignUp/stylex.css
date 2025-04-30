@@ -13,10 +13,10 @@ body{
   flex-direction: column;
   grid-template-rows: 1fr auto;
 }
-div{
+/*div{
   min-width: 100%;
   height: 250%;
-}
+}*/
 .container h1{
   color: purple;
   font-size: 2rem;
