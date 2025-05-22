@@ -15,6 +15,11 @@ function showSignup() {
             alert(`Login attempted with Email: ${email}`);
             // Add your login logic here
         }
+        function handleForgotPassword() {
+    console.log('Forgotten Password clicked');
+    // Add your password reset logic here (e.g., redirect to reset page or show a modal)
+    alert('Redirecting to password reset page...'); // Placeholder
+}
 
         function handleSignup(event) {
             event.preventDefault();
@@ -24,3 +29,5 @@ function showSignup() {
             alert(`Signup attempted with Name: ${name}, Email: ${email}`);
             // Add your signup logic here
         }
+        
+        

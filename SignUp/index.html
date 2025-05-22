@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/b572ff92bb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Login & Signup</title>
     
@@ -11,20 +13,24 @@
     <div class="container">
         <!-- Login Form -->
             <div class="form-box" id="loginForm">
-                <img src="YouTardu.png" alt="YouTardu" style="width:80px;height:80px;">
+                <img src="YouTardu.png" class="logo" alt="YouTardu" style="width:80px;height:80px;">
                    <h2>YouTardu</h2>
                       <h3>Login</h3>
+                      
                          <form id="login" onsubmit="handleLogin(event)">
                             <div class="input-group">
-                   
-                                  <input type="email" id="loginEmail" placeholder="Emailor Username" required>
+                                   <!-- <i id="icon" class="fa-solid fa-envelope"></i>-->
+                                  <input type="email" action="r.php"method="POST" id="loginEmail" class="placeholder" placeholder="Email or Username" required>
                                 </div>
                             <div class="input-group">
-                    
-                        <input type="password" id="loginPassword" placeholder="Password" required>
-                    </div>
+                           <!--0 <i id="icon" class="fa-solid fa-lock"></i>-->
+                        <input type="password" id="loginPassword" class="placeholder" placeholder="Password" required>
+                    </div><br>
                 <button type="submit">Login</button>
             </form>
+            <div class="forgot-password">
+    <a href="#" onclick="handleForgotPassword()"><i class="fas fa-lock"></i> Forgotten Password?</a>
+</div>
                     <div class="toggle-link">
                 <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up</a></p>
             </div>
@@ -34,7 +40,7 @@
         <div class="form-box" id="signupForm" style="display: none;">
                 <img src="YouTardu.png" alt="YouTardu" style="width:100px;height:100px;">
                     <h2>YouTardu</h2>
-                    <h3 align="center0">Sign Up</h3>
+                    <h3 align="center">Sign Up</h3>
                         <form id="signup" onsubmit="handleSignup(event)">
                             <div class="input-group">
                         
@@ -47,9 +53,11 @@
                                 <div class="input-group">
                         
                       <input type="password" id="signupPassword" placeholder="Password" required>
-                   </div>
+                   </div><br>
+                       
                         <button type="submit">Sign Up</button>
                 </form>
+                
                <div class="toggle-link">
                 <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
             </div>
@@ -57,8 +65,10 @@
           </div>
 
         <footer>
-        <p>&copy; 2025 YouTardu. All rights reserved.</p>
+        <p>&copy; 2025 YouTardu. All Right Reserved.</p>
     </footer>
    <script src="script.js"></script>
+   <!--<script src="api.js"></script>-->
+   <!--<script src="node.js"></script>-->
 </body>
 </html>

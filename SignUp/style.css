@@ -11,20 +11,25 @@
             flex-direction: column;
             background: #eef8ff;
         }
+        .logo{
+            margin-left: 30px;
+            position: relative;
+            bottom: 2px;
+        }
         h2 {
-            margin-left: 90px;
-position: relative;
-bottom: 70px;
-    font-size: 35px;
-    font-weight: bolder;
-    background: linear-gradient(to right, #f32170,
+            margin-left: 50px;
+            position: relative;
+            bottom: 75px;
+            font-size: 45px;
+            font-weight: bolder;
+            background: linear-gradient(to right, #f32170,
             #ff6b08, #cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
     h3 {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
     margin-bottom: 1.5rem;
     margin-top: -5.4rem; /* Move h3 upward by 0.5rem */
@@ -44,29 +49,50 @@ bottom: 70px;
             border-radius:30px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
+            margin-top: 200px;
+            margin-bottom: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .form-box h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             color: #333;
         }
 
         .input-group {
-            margin-bottom: 20px;
-        }
+            margin: 10px;
+            margin-bottom: 1px; /* Adds vertical spacing between input groups */
+           /* padding: 5px; /* Adds internal spacing within each input group */
+            display: flex; /* Optional: Use Flexbox for icon and input alignment */
+            /*align-items: center; /* Vertically center icon and input */
+     /* Space between icon and input inside the input group */
 
-        .input-group label {
+        }
+        input::placeholder{
+            font-size: 20px;
+            font-weight: bolder;
+            text-indent: 5px;
+            
+        }
+        /**/
+
+
+
+        /*.input-group label {
             display: block;
             margin-bottom: 5px;
             color: #555;
-        }
-
+        }*/
+            
         .input-group input {
+            
             width: 100%;
             padding: 15px;
-            border: 0px solid #5B5C5E;
+            border: 2px solid #fff;
             border-radius: 18px;
             font-size: 16px;
             box-shadow: 0px 8px 20px rgba(197, 199, 203, 1);;
@@ -74,32 +100,95 @@ bottom: 70px;
 
         .input-group input:focus {
             outline: none;
-            border-color: #9C194F;
+            border-color: #D647D7;
         }
-
+         
         button {
-            width: 100%;
-            padding: 12px;
-            background: #9b59b6;
+            margin-left: 20px;
+            align-items: center;
+            width: 90%;
+            padding: 15px;
+            background: #005BFF;
             border: none;
             border-radius: 20px;
             color: white;
-            font-size: 16px;
+            font-size: 20px;
+            font-weight: bolder;
             cursor: pointer;
             transition: background 0.3s;
         }
+        .forgot-password {
+    margin-top: 0.5rem; /* Space above, below login button */
+    margin-bottom: 0.5rem; /* Space below, before toggle-link */
+    text-align: center; /* Center the link for consistency */
+}
+/*icon start*/
+   /* #icon {  
+        position: relative;
+        font-size: 25px;
+        margin-left: 10px ;
+        top: 5px;
+    }
+/*icon start*/
+
+.forgot-password a {
+    position: relative;
+    top: 8px;
+    font-weight: bolder;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1rem; /* Slightly smaller for hierarchy */
+}
+
+.forgot-password a:hover {
+    text-decoration: none;
+}
+
+/* message error start*/
+/*.form-box .error-message, .form-box .success-message {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+.error-message {
+    background: #ff4444;
+    color: #fff;
+}
+.success-message {
+    background: #44ff44;
+    color: #fff;
+}
+.forgot-password-form {
+    margin-top: 1rem;
+}
+.forgot-password-form.hidden {
+    display: none;
+}
+.forgot-password-form {
+    margin-top: 1rem;
+}
+.forgot-password-form.hidden {
+    display: none;
+}
+/*message error end*/
+
+
 
         button:hover {
-            background: #8e44ad;
+            background: #005BFF;
         }
 
         .toggle-link {
+            font-size: 15px;
+            font-weight: bolder;
             text-align: center;
             margin-top: 20px;
         }
 
         .toggle-link a {
-            color: #9b59b6;
+            font-size: 16px;
+            font-weight: bolder;
+            color: #004FFF;
             text-decoration: none;
         }
 
