@@ -64,8 +64,9 @@ header {
 /* SEARCH BOX */
 .searchbox {
   position: relative;
+  left : 50px;
   flex: 1;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 .searchbox input {
@@ -80,7 +81,7 @@ header {
 .searchbox .search-btn,
 .searchbox i {
   position: absolute;
-  right: 12px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--grey);
