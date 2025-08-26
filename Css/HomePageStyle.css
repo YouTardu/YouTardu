@@ -41,13 +41,17 @@ header{
   justify-content: center;
 }
 .header-container{
-  width: 95%;
-  background: var(--white);
-  height: 100px;
-  overflow: hidden;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px 0 var(--shadow);
+    position: fixed;    /* အပေါ်မှာအမြဲကပ် */
+    top: 0; left: 0; right: 0;
+    height: 64px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 1000;      /* အပေါ်ဆုံးပြစေမယ် */
+    box-shadow: 0 2px 5px 0 var(--shadow);
 }
 .header-wrapper{
   display: flex;
@@ -62,10 +66,16 @@ header{
 }
 .logobox img{
   width: 60px;
+  position: relative;
+  right: 30px;
 }
 .searchbox{
-  width: 30%;
-  position: relative;
+    width: 150px;        /* အကျယ် */
+    height: 28px;        /* အမြင့် */
+    padding: 4px 8px;    /* အတွင်းအကျယ် */
+    font-size: 14px;     /* အထဲမှာစာအရွယ် */
+    border: 1px solid #ccc;
+    border-radius: 50px;
 }
 .iconbox1{
   width: 25%;
