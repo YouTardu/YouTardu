@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="my">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Plantdora Card</title>
+<style>
+  :root{
+    --card-width: 320px;
+    --card-radius: 18px;
+    --accent: #efefef;
+    --text: #111;
+    --muted: #6b6b6b;
+  }
+
+  /* page layout */
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: #ffffff;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  /* card */
+  .card{
+    width: var(--card-width);
+    border-radius: var(--card-radius);
+    box-shadow: 0 10px 30px rgba(6, 255, 0, 1);
+    overflow: hidden;
+    background: #0072FF;
+  }
+
+  /* image area */
+  .hero{
+    position: relative;
+    aspect-ratio: 9 / 14; /* tall vertical image area */
+    background: #ED0404 center/cover no-repeat;
+  }
+
+  .hero img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display:block;
+    border-radius: 25px;
+  }
+
+  /* three-dots menu top-right */
+  .dots{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    display:flex;
+    gap:6px;
+    flex-direction: column;
+    align-items:center;
+  }
+  .dots .dot{
+    width:6px; height:6px; border-radius:50%;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.08) inset;
+  }
+
+  /* caption overlay bottom-left */
+  .caption{
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    color: #fff;
+    font-weight:600;
+    font-size: 14px;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.6);
+    display:flex;
+    gap:8px;
+    align-items:center;
+    backdrop-filter: blur(0.5px);
+  }
+
+  /* small white circular action buttons at bottom-right of image */
+  .image-actions{
+    position:absolute;
+    right:12px;
+    bottom: -18px; /* overlaps into the gray lower section */
+    display:flex;
+    gap:10px;
+  }
+  .action-btn{
+    width:38px; height:38px;
+    border-radius:50%;
+    background: #fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: 2px solid rgba(0,0,0,0.03);
+  }
+
+  /* lower info section */
+  .meta{
+    background: var(--accent);
+    padding: 28px 18px 30px 18px;
+    position:relative;
+  }
+
+  .avatar{
+    position:absolute;
+    left:18px;
+    top:20px; /* to overlap into the image */
+    width:64px; height:64px;
+    border-radius:50%;
+    border:4px solid var(--accent);
+    overflow:hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    background: #fff;
+  }
+  .avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .title{
+    margin-left: 88px; /* leave space for avatar */
+  }
+  .title h3{
+    margin:0;
+    font-size:20px;
+    color: var(--text);
+    letter-spacing: -0.2px;
+  }
+  .title p{
+    margin:4px 0 0 0;
+    font-size:13px;
+    color: var(--muted);
+  }
+
+  /* responsiveness */
+  @media (max-width:420px){
+    :root{ --card-width: 300px; }
+  }
+  @media (max-width:340px){
+    :root{ --card-width: 260px; }
+  }
+
+  /* small icon placeholders (simple svg) */
+  .icon{
+    width:18px; height:18px;
+    display:inline-block;
+  }
+</style>
+</head>
+<body>
+
+<div class="card" aria-label="Plantdora card">
+  <!-- top image area -->
+  <div class="hero">
+    <!-- replace src with your image URL -->
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a78f2f3f5a5f3c8e0c2f3a5b1e7a8c9" alt="green leaves with dew">
+
+    <!-- 3 small vertical dots -->
+    <div class="dots" aria-hidden="true">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- caption bottom-left -->
+    <div class="caption">This is Pandora leaf 🌿🌿🌿</div>
+
+    <!-- action buttons overlapping -->
+    <div class="image-actions">
+      <div class="action-btn" title="chat">
+        <!-- small chat bubble svg -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 4h16v10H7l-3 3V4z" stroke="#111" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="action-btn" title="profile">
+        <!-- user circle svg -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#111" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="7" r="4" stroke="#111" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- lower gray meta section -->
+  <div class="meta">
+    <!-- avatar overlapping -->
+    <div class="avatar">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a78f2f3f5a5f3c8e0c2f3a5b1e7a8c9" alt="avatar">
+    </div>
+
+    <div class="title">
+      <h3>Plantdora</h3>
+      <p>@Plantdora</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
