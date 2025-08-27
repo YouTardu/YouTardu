@@ -35,7 +35,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  height: 64px;
+  height: 45px;
 }
 
 .header-container {
@@ -57,16 +57,16 @@ header {
 }
 
 .logobox img {
-  width: 60px;
+  width: 45px;
   height: auto;
 }
 
 /* SEARCH BOX */
 .searchbox {
   position: relative;
-  left : 50px;
+  left : 80px;
   flex: 1;
-  max-width: 200px;
+  max-width: 100px;
 }
 
 .searchbox input {
@@ -93,8 +93,10 @@ header {
 
 /* CENTERED ICONS */
 .iconbox {
+  position: relative;
   display: flex;
-  align-items: center;
+  right: 40px;
+  /**align-items: center;**/
   gap: 12px;
   flex: 1;
   justify-content: center;
