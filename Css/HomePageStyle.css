@@ -61,35 +61,38 @@ header {
   height: auto;
 }
 
-/* SEARCH BOX */
-.searchbox {
-  position: relative;
-  left : 80px;
-  flex: 1;
-  max-width: 100px;
-}
 
-.searchbox input {
-  width: 100%;
-  padding: 8px 40px 8px 12px;
-  border-radius: 50px;
-  border: 1px solid #ccc;
-  background: var(--foreground);
-  outline: none;
-}
 
-.searchbox .search-btn,
-.searchbox i {
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--grey);
-  cursor: pointer;
-  font-size: 18px;
-  border: none;
-  background: transparent;
-}
+    /* SEARCH BOX - Fixed positioning and responsiveness */
+    .searchbox {
+      position: relative;
+      flex: 1;
+      max-width: 300px;
+      min-width: 120px; /* Minimum width to prevent too much shrinking */
+    }
+
+    .searchbox input {
+      width: 100%;
+      padding: 6px 40px 6px 12px;
+      border-radius: 50px;
+      border: 1px solid #ccc;
+      background: var(--foreground);
+      outline: none;
+      font-size: 14px;
+    }
+
+    .searchbox .search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--grey);
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      background: transparent;
+      padding: 2px;
+    }
 
 /* CENTERED ICONS */
 .iconbox {
